@@ -1,7 +1,7 @@
 
 import subprocess
 
-def setup_wmic_win10() -> tuple:
+def install_wmic_win10(error_class) -> tuple:
     result = subprocess.run(
         ['dism', '/online', '/Enable-Feature', '/FeatureName:WMIC', '/NoRestart'],
         stdout=subprocess.PIPE,
@@ -12,4 +12,4 @@ def setup_wmic_win10() -> tuple:
     if result.returncode == 0:
         return (True , result.returncode)
     else:
-        return (False , result.returncode)
+        raise error_class(f"SHRWMICManagerException [ERROR.7002] error occurred while installing wmic | return_code:{result.returncode}")
