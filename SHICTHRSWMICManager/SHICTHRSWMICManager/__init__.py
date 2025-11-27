@@ -27,3 +27,5 @@ def SHRWMICManager_check_is_wmic_available():
         return check_is_wmic_available()
     except Exception as e:
         raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7000] unable to check wmic | {str(e)}")
+
+

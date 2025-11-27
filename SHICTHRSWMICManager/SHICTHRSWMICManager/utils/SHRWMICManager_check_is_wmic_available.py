@@ -1,7 +1,7 @@
 
 import subprocess
 
-def check_is_wmic_available():
+def check_is_wmic_available() -> tuple:
     try:
         startup_info = subprocess.STARTUPINFO()
         startup_info.dwFlags |= subprocess.STARTF_USESHOWWINDOW
@@ -16,8 +16,8 @@ def check_is_wmic_available():
             timeout=5
         )
 
-        return result.returncode == 0 and "Caption" in result.stdout
+        return (result.returncode == 0 and "Caption" in result.stdout , result.returncode)
         
     except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
-        return False
+        return (False , result.returncode)
 
