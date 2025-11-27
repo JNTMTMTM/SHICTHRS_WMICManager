@@ -11,6 +11,7 @@ init()
 
 from .utils.SHRWMICManager_check_is_wmic_available import check_is_wmic_available
 from .utils.SHRWMICManager_install_wmic_win10 import install_wmic_win10
+from .utils.SHRWMICManager_install_wmic_win11 import install_wmic_win11
 
 print('\033[1mWelcome to use SHRWMICManager\033[0m\n|  \033[1;34mGithub : https://github.com/JNTMTMTM/SHICTHRS_WMICManager\033[0m')
 print('|  \033[1mAlgorithms = rule ; Questioning = approval\033[0m')
@@ -29,9 +30,14 @@ def SHRWMICManager_check_is_wmic_available():
     except Exception as e:
         raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7000] unable to check wmic | {str(e)}")
 
-
 def SHRWMICManager_install_wmic_win10():
     try:
         return install_wmic_win10(SHRWMICManagerException)
     except Exception as e:
-        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7001] unable to install wmic | {str(e)}")
+        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7001] unable to install wmic [win10] | {str(e)}")
+
+def SHRWMICManager_install_wmic_win11():
+    try:
+        return install_wmic_win11(SHRWMICManagerException)
+    except Exception as e:
+        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7003] unable to install wmic [win11] | {str(e)}")
