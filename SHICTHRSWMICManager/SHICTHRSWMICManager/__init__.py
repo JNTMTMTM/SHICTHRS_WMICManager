@@ -5,7 +5,6 @@
 # Copyright : © 2025-2026 SHICTHRS, Std. All rights reserved.
 # lICENSE : GPL-3.0
 
-import os
 from colorama import init
 init()
 
