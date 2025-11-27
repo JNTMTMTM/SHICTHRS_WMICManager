@@ -31,22 +31,22 @@ def SHRWMICManager_check_is_wmic_available():
     try:
         return check_is_wmic_available()
     except Exception as e:
-        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7000] unable to check wmic | {str(e)}")
+        raise SHRWMICManagerException(f"SHRWMICManager [ERROR.7000] unable to check wmic | {str(e)}")
 
 def SHRWMICManager_install_wmic_win10():
     try:
         return install_wmic_win10(SHRWMICManagerException)
     except Exception as e:
-        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7001] unable to install wmic [win10] | {str(e)}")
+        raise SHRWMICManagerException(f"SHRWMICManager [ERROR.7001] unable to install wmic [win10] | {str(e)}")
 
 def SHRWMICManager_install_wmic_win11():
     try:
         return install_wmic_win11(SHRWMICManagerException)
     except Exception as e:
-        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7003] unable to install wmic [win11] | {str(e)}")
+        raise SHRWMICManagerException(f"SHRWMICManager [ERROR.7003] unable to install wmic [win11] | {str(e)}")
     
 def SHRWMICManager_uninstall_wmic_win11():
     try:
         return uninstall_wmic_win11(SHRWMICManagerException)
     except Exception as e:
-        raise SHRWMICManagerException(f"SHRWMICManagerException [ERROR.7005] unable to uninstall wmic [win11] | {str(e)}")
+        raise SHRWMICManagerException(f"SHRWMICManager [ERROR.7005] unable to uninstall wmic [win11] | {str(e)}")

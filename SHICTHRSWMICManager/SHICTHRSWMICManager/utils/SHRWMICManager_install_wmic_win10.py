@@ -12,4 +12,4 @@ def install_wmic_win10(error_class) -> tuple:
     if result.returncode == 0:
         return (True , result.returncode)
     else:
-        raise error_class(f"SHRWMICManagerException [ERROR.7002] error occurred while installing wmic | return_code:{result.returncode}")
+        raise error_class(f"SHRWMICManager [ERROR.7002] error occurred while installing wmic | return_code:{result.returncode}")

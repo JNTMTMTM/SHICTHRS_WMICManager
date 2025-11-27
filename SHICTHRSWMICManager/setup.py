@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='SHICTHRSWMICManager',
-      version='1.0.0',
+      version='1.1.0',
       description='SHICTHRS WMIC Manager',
       url='https://github.com/JNTMTMTM/SHICTHRS_WMICManager',
       author='SHICTHRS',

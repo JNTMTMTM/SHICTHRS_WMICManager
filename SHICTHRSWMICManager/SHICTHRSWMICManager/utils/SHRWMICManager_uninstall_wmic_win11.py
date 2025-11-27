@@ -12,4 +12,4 @@ def uninstall_wmic_win11(error_class) -> tuple:
     if result.returncode == 0:
         return (True , result.returncode)
     else:
-        raise error_class(f"SHRWMICManagerException [ERROR.7006] error occurred while uninstalling wmic | return_code:{result.returncode}")
+        raise error_class(f"SHRWMICManager [ERROR.7006] error occurred while uninstalling wmic | return_code:{result.returncode}")
