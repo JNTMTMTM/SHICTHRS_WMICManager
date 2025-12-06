@@ -19,5 +19,5 @@ def check_is_wmic_available() -> tuple:
         return (result.returncode == 0 and "Caption" in result.stdout , result.returncode)
         
     except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
-        return (False , result.returncode)
+        return (False , None)
 
